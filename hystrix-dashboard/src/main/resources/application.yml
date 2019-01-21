@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: hystrix-dashboard
+server:
+  port: 8100
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8050/eureka/
+turbine:
+  app-config: eureka-consumer-feign-hystrix
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+
